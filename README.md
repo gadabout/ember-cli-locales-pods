@@ -28,9 +28,9 @@ app/locales/pods/[lang].js
 ##### app/locales/[lang].js
 ```
 import Ember from 'ember';
-import PodLocaes from 'stetson/locales/pods/en';
+import PodLocales from 'stetson/locales/pods/en';
 
-export default Ember.$.extend(true, PodLocaes, {
+export default Ember.$.extend(true, PodLocales, {
   "anything-else": {
     "could-go": "here",
     "if-you": "have no pod translations"
