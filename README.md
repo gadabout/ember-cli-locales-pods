@@ -2,6 +2,9 @@
 
 Enjoy translating your pods with the language files in the pod directory!
 
+# WARNING:
+Very new. Working very well for us, but proceed w/ caution and provide any feedback and we'll update accordingly!
+
 ## What is ember-cli-locales-pods?
 Say you have an activities route
 ##### Generate regular route:
@@ -10,7 +13,7 @@ ember g route activities -p
 ```
 ##### Then, use ember-cli-locales-pods to generate locale files:
 ```
-ember g locale activities -p
+ember g locale-pod activities -p
 ```
 
 ##### Your file structure would be:
@@ -52,13 +55,13 @@ You need to add the import file into wherever you pass on your translations to y
 To generate locales into your pod - just run:
 
 ```
-ember g locale [path] -p
+ember g locale-pod [path] -p
 ```
 
 To provide specify a language (default to `en`) add lang:[lang]:
 
 ```
-ember g locale [path] lang:de -p
+ember g locale-pod [path] lang:de -p
 ```
 
 Enjoy translating your pods! :)
