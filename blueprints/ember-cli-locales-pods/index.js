@@ -5,6 +5,5 @@ module.exports = {
 		// ember generate <entitiyName> <blueprint
 	},
 	afterInstall: function(options) {
-		return this.addPackageToProject('ember-i18n');
 	}
 };
