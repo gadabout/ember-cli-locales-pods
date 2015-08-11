@@ -19,7 +19,7 @@ module.exports = {
       throw new Error('You must use pods with ember-cli-locales-pods. Run with --pod.');
     }
 
-    this.podsDir = this._locals(options).fileMap.__path__.replace('/' + options.entity.name, '');
+    this.podsDir = false; //this._locals(options).fileMap.__path__.replace('/' + options.entity.name, '');
     this.importFile = this.podsDir ? this.podsDir.replace(/(\\|\/)$/, '') : 'pods';
     this.includingAppName = options.project.pkg.name;
     this.filePath = path.join(options.project.root, 'app/locales/' + this.importFile + '/');
