@@ -46,7 +46,7 @@ module.exports = {
     var hashString = JSON.stringify(arrayToObject({}, name.split('/'), replacementString));
     var varName = camelCase(name.replace(/\W/g, '-'));
     var podsDir = this.podsDir ? this.importFile + '/' : ''
-    var outputString = "import " + varName + " from '" + this.includingAppName + '/' + podsDir + name + "/locales/"+ this.lang +"';\n";
+    var outputString = "import " + varName + " from '" + this.includingAppName + '/pods/' + podsDir + name + "/locales/"+ this.lang +"';\n";
         outputString += "LocalManager.pushLocale(" + hashString.replace('"'+replacementString+'"', varName) + ");\n";
 
     return outputString;
