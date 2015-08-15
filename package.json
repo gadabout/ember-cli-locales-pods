@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-locales-pods",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Generates locales/[lang].js into pods.",
   "directories": {
     "doc": "doc",

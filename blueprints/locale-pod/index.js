@@ -43,11 +43,11 @@ module.exports = {
         return replacementString;
       }
     };
-    var hashString = JSON.stringify(arrayToObject({}, name.split('/'), replacementString)).replace(/_/g, "-");
+    var hashString = JSON.stringify(arrayToObject({}, name.split('/'), replacementString));
     var varName = camelCase(name.replace(/\W/g, '-'));
     var podsDir = this.podsDir ? this.importFile + '/' : '';
     var outputString = "import " + varName + " from '" + this.includingAppName + '/pods/' + podsDir + name + "/locales/"+ this.lang +"';\n";
-        outputString += "LocalManager.pushLocale(" + hashString.replace('"'+replacementString+'"', varName) + ");\n";
+        outputString += "LocalManager.pushLocale(" + hashString.replace('"'+replacementString+'"', varName).replace(/_/g, "-") + ");\n";
 
     return outputString;
   },
